@@ -1,0 +1,220 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+    width: 98.9vw;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-bar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: lightgrey;
+}
+
+.logo {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 10vh;
+    object-fit: cover;
+    margin-left: 0px;
+    mix-blend-mode: multiply;
+}
+
+.navigations {
+    padding: 0;
+    font-family: sans-serif;
+    margin-right: 30px;
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navigations li {
+    position: relative;
+    background-size: 100% 0;
+    transition: background-size 0.8s;
+    border-bottom: solid 1px brown;
+    padding: 10px 5px 10px 5px;
+    font-size: 22px;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 5px;
+    background-color: orange;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+
+.navigations li:hover::before {
+    height: 100%;
+}
+
+@media (min-width: 110vw) {
+    .navigations {
+        flex-direction: column;
+    }
+}
+
+.search_place {
+    border: solid 1px black;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 20vw;
+    min-height: 2vh;
+    transition: 0.4s;
+    padding: 5px;
+}
+
+input[type='search'] {
+    width: 13vw;
+    height: 3vh;
+    border: none;
+    outline: none;
+}
+
+input[type='search']:active{
+    border: solid 1px black;
+    border-right: none;
+    border-radius:;
+    outline: none;
+}
+
+.search_place i{
+    font-size: larger;
+}
+
+.animals {
+    height: fit-content;
+    width: 98.9vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #f0f0f0;
+    aspect-ratio: 4;
+}
+
+.animals section {
+    height: 400px;
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2%;
+}
+
+.animals img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.animals article{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    position: absolute;
+    color: red;
+    text-overflow:initial;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 110vh;
+    opacity: 0.6;
+    transition: 0.5s ease-in-out;
+}
+
+.animals img:hover{
+    height: 110%;
+    width: 110%;
+}
+
+.animals section:hover article{
+    margin-top: 50vh;
+}
